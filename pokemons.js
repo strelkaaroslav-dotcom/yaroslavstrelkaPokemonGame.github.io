@@ -64,7 +64,7 @@ export const pokemons = [
         ]
     },
     {
-        img: 'https://www.pngarts.com/files/3/Bulbasaur-PNG-Picture.png',
+        img: 'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/001.png',
         name: 'Bulbasaur',
         type: 'fire',
         hp: 294,
