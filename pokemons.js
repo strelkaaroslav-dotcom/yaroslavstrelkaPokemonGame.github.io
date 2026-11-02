@@ -64,7 +64,7 @@ export const pokemons = [
         ]
     },
     {
-        img: 'http://sify4321.000webhostapp.com/bulbasaur.png',
+        img: 'https://www.pngarts.com/files/3/Bulbasaur-PNG-Picture.png',
         name: 'Bulbasaur',
         type: 'fire',
         hp: 294,
@@ -96,7 +96,7 @@ export const pokemons = [
         ]
     },
     {
-        img: 'http://sify4321.000webhostapp.com/squirtle.png',
+        img: 'https://www.pngkey.com/png/full/154-1542418_banner-transparent-download-shiny-squirtle-pok-dex-pokemon.png',
         name: 'Squirtle',
         type: 'water',
         hp: 292,
@@ -128,7 +128,7 @@ export const pokemons = [
         ]
     },
     {
-        img: 'http://sify4321.000webhostapp.com/pidgey.png',
+        img: 'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/016.png',
         name: 'Pidgey',
         type: 'air',
         hp: 284,
@@ -160,7 +160,7 @@ export const pokemons = [
         ]
     },
     {
-        img: 'http://sify4321.000webhostapp.com/mew.png',
+        img: 'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/151.png',
         name: 'Mew',
         type: 'air',
         hp: 404,
