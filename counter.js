@@ -1,24 +1,17 @@
-const createClickCounter = (name, limit) => {
-    let count = 0;
+export const countBtn = (count = 6, el) => {
+    const innerText = el.innerText;
+
+    el.innerText = `${innerText} (${count})`;
 
     return () => {
-        count++;
-        const left = limit - count;
+        count--;
 
-        console.log(`Кнопка «${name}»: натискань ${count}, залишилось ${left}`);
-
-        return left;
-    };
-};
-
-export const attachClickCounter = ($btn, limit) => {
-    const name = $btn.innerText.trim();
-    const counter = createClickCounter(name, limit);
-
-    $btn.addEventListener('click', () => {
-        if (counter() === 0) {
-            $btn.disabled = true;
-            console.log(`Кнопка «${name}»: ліміт натискань вичерпано`);
+        if (count === 0) {
+            el.disabled = true;
         }
-    });
+
+        el.innerText = `${innerText} (${count})`;
+
+        return count;
+    };
 };

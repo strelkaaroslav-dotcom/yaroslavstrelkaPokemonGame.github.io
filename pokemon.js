@@ -2,11 +2,13 @@ class Selectors {
     constructor(name) {
         this.elHP = document.getElementById(`health-${name}`);
         this.elProgressbar = document.getElementById(`progressbar-${name}`);
+        this.elName = document.getElementById(`name-${name}`);
+        this.elImg = document.getElementById(`img-${name}`);
     }
 }
 
 class Pokemon extends Selectors {
-    constructor({ name, hp, type, selectors }) {
+    constructor({ name, hp, type, img, selectors, attacks = [] }) {
         super(selectors);
 
         this.name = name;
@@ -15,9 +17,19 @@ class Pokemon extends Selectors {
             total: hp,
         };
         this.type = type;
+        this.img = img;
+        this.attacks = attacks;
 
+        this.renderInfo();
         this.renderHP();
     }
+
+    renderInfo = () => {
+        const { elName, elImg, name, img } = this;
+
+        elName.innerText = name;
+        elImg.src = img;
+    };
 
     renderHP = () => {
         this.renderHPLife();
@@ -39,7 +51,7 @@ class Pokemon extends Selectors {
 
         if (percent < 20) {
             elProgressbar.classList.add('critical');
-        } else if (percent < 50) {
+        } else if (percent < 60) {
             elProgressbar.classList.add('low');
         }
     };

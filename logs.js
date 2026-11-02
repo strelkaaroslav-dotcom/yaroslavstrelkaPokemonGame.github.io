@@ -30,3 +30,7 @@ export const addLog = (text) => {
     $p.innerText = text;
     $logs.insertBefore($p, $logs.children[0]);
 };
+
+export const clearLogs = () => {
+    $logs.innerHTML = '';
+};
